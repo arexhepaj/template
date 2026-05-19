@@ -9,7 +9,7 @@
       content="width=device-width, initial-scale=1.0"
     />
 
-    <title>67 PHONK 🔥</title>
+    <title>GoatedMath Style 🔥</title>
 
     <style>
       * {
@@ -26,152 +26,204 @@
         justify-content: center;
         align-items: center;
 
-        background: radial-gradient(circle, #111, #000);
-
         font-family: Arial, sans-serif;
+
+        background:
+          radial-gradient(circle at top left, #00f7ff33, transparent 30%),
+          radial-gradient(circle at bottom right, #ff00aa33, transparent 30%),
+          linear-gradient(135deg, #050816, #0f172a, #111827);
+
+        animation: bgMove 10s ease infinite;
       }
 
-      /* Background Glow */
-      .glow {
-        position: absolute;
-        width: 600px;
-        height: 600px;
-
-        background: linear-gradient(
-          45deg,
-          #ff004c,
-          #7b00ff,
-          #00d0ff
-        );
-
-        filter: blur(120px);
-
-        animation: spin 10s linear infinite;
-      }
-
-      @keyframes spin {
-        from {
-          transform: rotate(0deg);
+      @keyframes bgMove {
+        0% {
+          filter: hue-rotate(0deg);
         }
 
-        to {
-          transform: rotate(360deg);
-        }
-      }
-
-      /* Main Text */
-      .title {
-        position: relative;
-
-        font-size: 8rem;
-        font-weight: 900;
-
-        color: white;
-
-        text-transform: uppercase;
-
-        animation:
-          bounce 2s infinite,
-          glowText 2s infinite alternate;
-
-        z-index: 2;
-      }
-
-      @keyframes bounce {
-        0%,
         100% {
-          transform: scale(1);
-        }
-
-        50% {
-          transform: scale(1.1);
+          filter: hue-rotate(360deg);
         }
       }
 
-      @keyframes glowText {
-        from {
-          text-shadow:
-            0 0 10px #ff004c,
-            0 0 20px #ff004c,
-            0 0 40px #7b00ff;
-        }
+      /* Floating Glow Balls */
 
-        to {
-          text-shadow:
-            0 0 20px #00d0ff,
-            0 0 40px #7b00ff,
-            0 0 80px #ff004c;
-        }
-      }
-
-      /* Moving Lines */
-      .line {
+      .orb {
         position: absolute;
+        border-radius: 50%;
 
-        width: 200%;
-        height: 2px;
+        filter: blur(60px);
 
-        background: rgba(255, 255, 255, 0.2);
+        opacity: 0.6;
 
-        animation: moveLines 4s linear infinite;
+        animation: float 8s infinite ease-in-out;
       }
 
-      .line:nth-child(2) {
-        top: 30%;
+      .orb1 {
+        width: 250px;
+        height: 250px;
+
+        background: #00f7ff;
+
+        top: 10%;
+        left: 10%;
       }
 
-      .line:nth-child(3) {
-        top: 70%;
+      .orb2 {
+        width: 300px;
+        height: 300px;
+
+        background: #ff00aa;
+
+        bottom: 10%;
+        right: 10%;
+
         animation-delay: 2s;
       }
 
-      @keyframes moveLines {
-        from {
-          transform: translateX(-50%);
+      @keyframes float {
+        0% {
+          transform: translateY(0px);
         }
 
-        to {
-          transform: translateX(0%);
+        50% {
+          transform: translateY(-30px);
+        }
+
+        100% {
+          transform: translateY(0px);
         }
       }
 
-      /* Floating Particles */
-      .particles span {
-        position: absolute;
+      /* Main Card */
 
+      .card {
+        position: relative;
+
+        width: 420px;
+
+        padding: 40px;
+
+        border-radius: 30px;
+
+        background: rgba(255, 255, 255, 0.08);
+
+        border: 1px solid rgba(255, 255, 255, 0.2);
+
+        backdrop-filter: blur(15px);
+
+        text-align: center;
+
+        box-shadow:
+          0 0 30px rgba(0, 247, 255, 0.2),
+          0 0 60px rgba(255, 0, 170, 0.15);
+
+        animation: pop 2s infinite alternate;
+      }
+
+      @keyframes pop {
+        from {
+          transform: scale(1);
+        }
+
+        to {
+          transform: scale(1.03);
+        }
+      }
+
+      /* Fake Logo Style */
+
+      .logo {
+        width: 120px;
+        height: 120px;
+
+        margin: auto;
+        margin-bottom: 25px;
+
+        border-radius: 25px;
+
+        background:
+          linear-gradient(135deg, #00f7ff, #ff00aa);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-size: 3rem;
+        font-weight: bold;
         color: white;
 
-        animation: float 6s linear infinite;
-
-        opacity: 0.7;
+        box-shadow:
+          0 0 25px #00f7ff,
+          0 0 40px #ff00aa;
       }
 
-      @keyframes float {
+      h1 {
+        color: white;
+
+        font-size: 3rem;
+
+        letter-spacing: 2px;
+
+        margin-bottom: 10px;
+
+        text-shadow:
+          0 0 10px #00f7ff,
+          0 0 20px #ff00aa;
+      }
+
+      p {
+        color: #d1d5db;
+
+        font-size: 1.1rem;
+
+        line-height: 1.6;
+      }
+
+      /* Floating Symbols */
+
+      .symbols span {
+        position: absolute;
+
+        color: rgba(255,255,255,0.15);
+
+        font-size: 2rem;
+
+        animation: symbols 12s linear infinite;
+      }
+
+      @keyframes symbols {
         from {
-          transform: translateY(100vh) scale(0);
+          transform: translateY(100vh) rotate(0deg);
         }
 
         to {
-          transform: translateY(-10vh) scale(1.5);
+          transform: translateY(-20vh) rotate(360deg);
         }
       }
     </style>
   </head>
 
   <body>
-    <div class="glow"></div>
+    <div class="orb orb1"></div>
+    <div class="orb orb2"></div>
 
-    <div class="line"></div>
-    <div class="line"></div>
-
-    <div class="particles">
-      <span style="left: 10%; animation-delay: 0s;">🔥</span>
-      <span style="left: 25%; animation-delay: 1s;">⚡</span>
-      <span style="left: 40%; animation-delay: 2s;">🔥</span>
-      <span style="left: 60%; animation-delay: 3s;">⚡</span>
-      <span style="left: 80%; animation-delay: 4s;">🔥</span>
+    <div class="symbols">
+      <span style="left: 10%; animation-delay: 0s;">π</span>
+      <span style="left: 25%; animation-delay: 2s;">√</span>
+      <span style="left: 45%; animation-delay: 4s;">∞</span>
+      <span style="left: 70%; animation-delay: 1s;">∑</span>
+      <span style="left: 85%; animation-delay: 5s;">Δ</span>
     </div>
 
-    <h1 class="title">67 PHONK</h1>
+    <div class="card">
+      <div class="logo">GM</div>
+
+      <h1>GOATEDMATH</h1>
+
+      <p>
+        Smart vibes. Neon glow. Math but actually cool. 🔥
+      </p>
+    </div>
   </body>
 </html>
