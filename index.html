@@ -1,229 +1,189 @@
 <!DOCTYPE html>
-
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
-
-    <title>GoatedMath Style 🔥</title>
-
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      body {
-        height: 100vh;
-        overflow: hidden;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        font-family: Arial, sans-serif;
-
-        background:
-          radial-gradient(circle at top left, #00f7ff33, transparent 30%),
-          radial-gradient(circle at bottom right, #ff00aa33, transparent 30%),
-          linear-gradient(135deg, #050816, #0f172a, #111827);
-
-        animation: bgMove 10s ease infinite;
-      }
-
-      @keyframes bgMove {
-        0% {
-          filter: hue-rotate(0deg);
-        }
-
-        100% {
-          filter: hue-rotate(360deg);
-        }
-      }
-
-      /* Floating Glow Balls */
-
-      .orb {
-        position: absolute;
-        border-radius: 50%;
-
-        filter: blur(60px);
-
-        opacity: 0.6;
-
-        animation: float 8s infinite ease-in-out;
-      }
-
-      .orb1 {
-        width: 250px;
-        height: 250px;
-
-        background: #00f7ff;
-
-        top: 10%;
-        left: 10%;
-      }
-
-      .orb2 {
-        width: 300px;
-        height: 300px;
-
-        background: #ff00aa;
-
-        bottom: 10%;
-        right: 10%;
-
-        animation-delay: 2s;
-      }
-
-      @keyframes float {
-        0% {
-          transform: translateY(0px);
-        }
-
-        50% {
-          transform: translateY(-30px);
-        }
-
-        100% {
-          transform: translateY(0px);
-        }
-      }
-
-      /* Main Card */
-
-      .card {
-        position: relative;
-
-        width: 420px;
-
-        padding: 40px;
-
-        border-radius: 30px;
-
-        background: rgba(255, 255, 255, 0.08);
-
-        border: 1px solid rgba(255, 255, 255, 0.2);
-
-        backdrop-filter: blur(15px);
-
-        text-align: center;
-
-        box-shadow:
-          0 0 30px rgba(0, 247, 255, 0.2),
-          0 0 60px rgba(255, 0, 170, 0.15);
-
-        animation: pop 2s infinite alternate;
-      }
-
-      @keyframes pop {
-        from {
-          transform: scale(1);
-        }
-
-        to {
-          transform: scale(1.03);
-        }
-      }
-
-      /* Fake Logo Style */
-
-      .logo {
-        width: 120px;
-        height: 120px;
-
-        margin: auto;
-        margin-bottom: 25px;
-
-        border-radius: 25px;
-
-        background:
-          linear-gradient(135deg, #00f7ff, #ff00aa);
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        font-size: 3rem;
-        font-weight: bold;
-        color: white;
-
-        box-shadow:
-          0 0 25px #00f7ff,
-          0 0 40px #ff00aa;
-      }
-
-      h1 {
-        color: white;
-
-        font-size: 3rem;
-
-        letter-spacing: 2px;
-
-        margin-bottom: 10px;
-
-        text-shadow:
-          0 0 10px #00f7ff,
-          0 0 20px #ff00aa;
-      }
-
-      p {
-        color: #d1d5db;
-
-        font-size: 1.1rem;
-
-        line-height: 1.6;
-      }
-
-      /* Floating Symbols */
-
-      .symbols span {
-        position: absolute;
-
-        color: rgba(255,255,255,0.15);
-
-        font-size: 2rem;
-
-        animation: symbols 12s linear infinite;
-      }
-
-      @keyframes symbols {
-        from {
-          transform: translateY(100vh) rotate(0deg);
-        }
-
-        to {
-          transform: translateY(-20vh) rotate(360deg);
-        }
-      }
-    </style>
-  </head>
-
-  <body>
-    <div class="orb orb1"></div>
-    <div class="orb orb2"></div>
-
-    <div class="symbols">
-      <span style="left: 10%; animation-delay: 0s;">π</span>
-      <span style="left: 25%; animation-delay: 2s;">√</span>
-      <span style="left: 45%; animation-delay: 4s;">∞</span>
-      <span style="left: 70%; animation-delay: 1s;">∑</span>
-      <span style="left: 85%; animation-delay: 5s;">Δ</span>
-    </div>
-
-    <div class="card">
-      <div class="logo">GM</div>
-
-      <h1>GOATEDMATH</h1>
-
-      <p>
-        Smart vibes. Neon glow. Math but actually cool. 🔥
-      </p>
-    </div>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>KATSEYE 💖 Fan Guide</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+
+      background: linear-gradient(135deg, #ffb6d9, #ff69b4, #ffd1dc);
+
+      color: #fff;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px;
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(10px);
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin: 0;
+      text-shadow: 0 0 20px #fff;
+    }
+
+    .subtitle {
+      opacity: 0.9;
+      margin-top: 10px;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 30px;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.2);
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 20px;
+      padding: 15px;
+      text-align: center;
+      backdrop-filter: blur(10px);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      border-radius: 15px;
+    }
+
+    h2 {
+      margin: 10px 0 5px;
+    }
+
+    .info {
+      font-size: 0.9rem;
+      line-height: 1.4;
+      opacity: 0.95;
+    }
+
+    .section {
+      padding: 20px 30px;
+    }
+
+    .box {
+      background: rgba(255,255,255,0.18);
+      padding: 20px;
+      border-radius: 15px;
+      backdrop-filter: blur(10px);
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>KATSEYE 💖</h1>
+  <div class="subtitle">
+    Global girl group fan guide ✨
+  </div>
+</header>
+
+<div class="section">
+  <div class="box">
+    <h2>About the Group</h2>
+    <p>
+      :contentReference[oaicite:0]{index=0} is a global pop girl group formed through a survival project by HYBE & Geffen Records.  
+      They are known for powerful performances, fashion-forward visuals, and members from different countries.
+    </p>
+
+    <p>
+      Their concept focuses on confidence, unity, and high-energy pop performance stages.
+    </p>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="card">
+    <img src="https://via.placeholder.com/400x400.png?text=Daniela" />
+    <h2>Daniela</h2>
+    <p class="info">
+      • Role: Performer / Vocalist<br/>
+      • Known for: strong stage presence and expressive performance<br/>
+      • Fun fact: trained in dance-focused performance style
+    </p>
+  </div>
+
+  <div class="card">
+    <img src="https://via.placeholder.com/400x400.png?text=Lara" />
+    <h2>Lara</h2>
+    <p class="info">
+      • Role: Vocalist<br/>
+      • Known for: emotional vocals and elegant styling<br/>
+      • Fun fact: multilingual background adds global appeal
+    </p>
+  </div>
+
+  <div class="card">
+    <img src="https://via.placeholder.com/400x400.png?text=Manon" />
+    <h2>Manon</h2>
+    <p class="info">
+      • Role: Visual / Performer<br/>
+      • Known for: modeling background and chic visuals<br/>
+      • Fun fact: often praised for runway-like presence on stage
+    </p>
+  </div>
+
+  <div class="card">
+    <img src="https://via.placeholder.com/400x400.png?text=Megan" />
+    <h2>Megan</h2>
+    <p class="info">
+      • Role: Dancer / Performer<br/>
+      • Known for: sharp choreography and powerful energy<br/>
+      • Fun fact: stands out in performance-heavy stages
+    </p>
+  </div>
+
+  <div class="card">
+    <img src="https://via.placeholder.com/400x400.png?text=Sophia" />
+    <h2>Sophia</h2>
+    <p class="info">
+      • Role: Leader / Vocalist<br/>
+      • Known for: leadership and stage control<br/>
+      • Fun fact: helps guide group performance direction
+    </p>
+  </div>
+
+  <div class="card">
+    <img src="https://via.placeholder.com/400x400.png?text=Yoonchae" />
+    <h2>Yoonchae</h2>
+    <p class="info">
+      • Role: Maknae / Performer<br/>
+      • Known for: dance growth and youthful energy<br/>
+      • Fun fact: youngest member of the group
+    </p>
+  </div>
+
+</div>
+
+<div class="section">
+  <div class="box">
+    <h2>New Fan Guide 💡</h2>
+    <ul>
+      <li>They were formed through a survival competition project</li>
+      <li>Members come from different countries and cultures</li>
+      <li>Each comeback has a “concept era” (visual + music theme)</li>
+      <li>Strong focus on choreography + performance storytelling</li>
+      <li>Fandom is very active in voting, streaming, and edits</li>
+      <li>Manon is often highlighted for visual concepts</li>
+    </ul>
+  </div>
+</div>
+
+</body>
 </html>
