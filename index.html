@@ -2,7 +2,6 @@
 
 <html lang="en">
   <head>
-    <!-- Basic Page Setup -->
     <meta charset="UTF-8" />
 
     <meta
@@ -10,15 +9,143 @@
       content="width=device-width, initial-scale=1.0"
     />
 
-    <!-- Browser Tab Title -->
-    <title>✨ My React App ✨</title>
+    <title>✨ KATSEYE ✨</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        background: linear-gradient(
+          135deg,
+          #ffb6d9,
+          #ffd6f6,
+          #cdb4ff,
+          #bde0fe
+        );
+
+        background-size: 400% 400%;
+        animation: dreamyBackground 12s ease infinite;
+
+        overflow: hidden;
+      }
+
+      @keyframes dreamyBackground {
+        0% {
+          background-position: 0% 50%;
+        }
+
+        50% {
+          background-position: 100% 50%;
+        }
+
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      .card {
+        padding: 40px 60px;
+        border-radius: 30px;
+
+        background: rgba(255, 255, 255, 0.2);
+
+        backdrop-filter: blur(14px);
+
+        box-shadow:
+          0 8px 32px rgba(0, 0, 0, 0.2),
+          0 0 20px rgba(255, 255, 255, 0.4);
+
+        text-align: center;
+
+        animation: float 3s ease-in-out infinite;
+      }
+
+      @keyframes float {
+        0% {
+          transform: translateY(0px);
+        }
+
+        50% {
+          transform: translateY(-10px);
+        }
+
+        100% {
+          transform: translateY(0px);
+        }
+      }
+
+      h1 {
+        font-size: 3rem;
+        color: white;
+
+        text-shadow:
+          0 0 10px #fff,
+          0 0 20px #ff8fd8,
+          0 0 30px #c77dff;
+
+        letter-spacing: 2px;
+      }
+
+      p {
+        margin-top: 15px;
+        color: white;
+        font-size: 1.2rem;
+        opacity: 0.9;
+      }
+
+      .sparkles {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+      }
+
+      .sparkles span {
+        position: absolute;
+        color: white;
+        animation: sparkle 6s linear infinite;
+        font-size: 20px;
+      }
+
+      @keyframes sparkle {
+        from {
+          transform: translateY(100vh) rotate(0deg);
+          opacity: 0;
+        }
+
+        to {
+          transform: translateY(-10vh) rotate(360deg);
+          opacity: 1;
+        }
+      }
+    </style>
   </head>
 
   <body>
-    <!-- React App Mount -->
-    <div id="root"></div>
+    <div class="sparkles">
+      <span style="left: 10%;">✨</span>
+      <span style="left: 25%; animation-delay: 1s;">🧸</span>
+      <span style="left: 40%; animation-delay: 2s;">✨</span>
+      <span style="left: 60%; animation-delay: 3s;">💖</span>
+      <span style="left: 80%; animation-delay: 4s;">✨</span>
+    </div>
 
-    <!-- Main React File -->
+    <div class="card">
+      <h1>KATSEYE IS GOOD 🧸</h1>
+
+      <p>Dreamy vibes forever ✨</p>
+    </div>
+
     <script
       type="module"
       src="/src/main.jsx"
